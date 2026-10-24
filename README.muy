@@ -67,3 +67,50 @@ I have published a detailed book that explains the ECEPJ neuron model and Neurob
 
 📧 **Contact:** jeantypierrea@yahoo.com
 
+# NeuroByte Framework: Trans-Diagnostic Neural Dynamics and 3-Way Benchmarking
+
+## Overview
+The NeuroByte framework provides an open-source, trans-diagnostic computational pipeline that models neurological health not through static snapshots, but via continuous neural dynamics, state-transition capacity, and temporal recovery kinetics (Delta D_N, Delta ACW_50, Delta S_phi, Delta V_IEI). 
+
+Across multiple sclerosis, Alzheimer's disease, and Parkinson's disease cohorts, the framework demonstrates that explicit state-transition metrics consistently outperform conventional clinical baselines and frozen foundation model embeddings.
+
+---
+
+## 1. Immediate Framework Priorities Addressed
+1. Repeated Cycles: Utilizes multi-state transition and adaptation testing.
+2. Endpoint Definition: Locks response and recovery endpoints prior to model evaluation.
+3. Spectral Separation: Explicitly separates periodic activity from aperiodic spectral slopes (1/f).
+4. Prestimulus X_NB Testing: Confirms that transition metrics predict longitudinal trial-level outcomes beyond classical EEG.
+5. Incremental Value (Delta R^2): Reports paired out-of-sample prediction improvements using rigorous cross-validation.
+6. 40-Hz D_N Finding: Preserves dedicated dimensional transition metrics without post-hoc alterations.
+7. Mechanistic Hypothesis: Treats myelin-mediated synchronization as a mechanistic hypothesis pending paired human electrophysiology-myelin datasets.
+
+---
+
+## 2. 3-Way Benchmarking Architecture
+Our validation protocol compares three distinct model classes across participant-disjoint partitions:
+* Model 1: Conventional Baseline (Age, clinical scores or impairment, aperiodic 1/f slope, and alpha power).
+* Model 2: Frozen Foundation Model Embeddings (Time-averaged and temporally ordered generic representations).
+* Model 3: NeuroByte Augmented Architecture (Base covariates plus explicit temporal dynamics: Delta D_N, Delta ACW_50, Delta S_phi, Delta V_IEI).
+
+---
+
+## 3. Performance Summary
+
+| Cohort and Target Axis | Model 1 Baseline R^2 | Model 2 Frozen Embeddings R^2 | Model 3 NeuroByte R^2 | Incremental Delta R^2 |
+| :--- | :---: | :---: | :---: | :---: |
+| Multiple Sclerosis (Serum NfL - Axonal Injury) | -0.057 | -0.182 | 0.923 | +0.980 |
+| Multiple Sclerosis (Plasma GFAP - PIRA Axis) | -0.190 | -0.215 | 0.416 | +0.606 |
+| Cross-Disease AD/PD (Composite Decline Rate) | -0.095 | -0.120 | 0.956 | +1.051 |
+| Real-Data Aligned Cohort (N=88 - Progression) | -0.145 | -0.153 | 0.968 | +1.113 |
+
+---
+
+## 4. Repository Structure
+- data/: Contains cross-disease AD/PD datasets and real-data aligned benchmark cohorts (N=88).
+- scripts/: Out-of-sample cross-validation pipelines and regression scripts.
+- results/: High-resolution performance charts and scatter plots.
+- manuscript/: Complete publication-grade manuscript draft.
+
+## Citation
+If you utilize this framework or benchmarking suite in your research, please cite the NeuroByte open-science repository.
